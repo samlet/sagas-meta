@@ -1,0 +1,5 @@
+// usage: import "xx/constants" as cons
+// cons.systemToken
+final String systemToken="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzYWdhcyIsIm5hbWUiOiJnZW5lcmFsIiwidXNlciI6InN5c3RlbSJ9.U5qOg0eD3HmE8MyGZn7IascEMAK6ABita7IoHniqnWo";
+// TestManufAdmin
+final String manufAdminToken="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzYWdhcyIsIm5hbWUiOiJnZW5lcmFsIiwidXNlciI6IlRlc3RNYW51ZkFkbWluIn0.A332UqvAjaZ69yqkLLZx4dbN_OpYNfHO_hft0WFhLg8";
