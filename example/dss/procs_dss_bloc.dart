@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:sagas_meta/src/data_fetcher.dart';
 import 'package:sagas_meta/src/jsonifiers/sagas_dss_jsonifiers.dart';
 import 'package:sagas_meta/src/models/sagas_dss.dart';
+import 'package:sagas_meta/src/utils.dart';
 
 class TrackBlocDelegate extends BlocDelegate {
   @override
@@ -23,7 +24,7 @@ class TrackBlocDelegate extends BlocDelegate {
   }
 }
 
-void main() {
+void main() async{
   BlocSupervisor().delegate = TrackBlocDelegate();
   final client= http.Client();
   final fetcher= new DataFetcher<DssOrdinalSales>(client,
@@ -32,5 +33,8 @@ void main() {
 
   _postBloc.dispatch(Fetch());
   print("...");
+
+  await sleep1();
+  await client.close();
 }
 

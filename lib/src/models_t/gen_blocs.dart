@@ -8,27 +8,53 @@ import 'package:sagas_meta/src/common_events.dart';
 
 import 'package:sagas_meta/src/models_t/gen_models.dart';
 
-class CommonSrvBloc extends Bloc<ServiceEvent, ServiceState> {
+class CommonSrvBloc extends Bloc<ServiceEvent, ServiceState>{
   final SrvClient client;
   CommonSrvBloc({@required this.client});
+
 
   @override
   ServiceState get initialState => ServiceLoading();
   @override
   Stream<ServiceState> mapEventToState(
-      ServiceState currentState,
       ServiceEvent event,
       ) async* {
-    if (event is TestScvEv) {
+    if (event is SimpleEv){
+      print(event.message);
+      yield ServiceNotLoaded();
+    }
+    else if (event is TestScvEv) {
       yield* _mapTestScvEvToState(currentState, event);
-    } else if (event is CreatePersonEv) {
-      // ...
+    }
+    else if (event is CreatePersonEv) {
+      yield* _mapCreatePersonEvToState(currentState, event);
+    }
+    else if (event is QuickAddVariantEv) {
+      yield* _mapQuickAddVariantEvToState(currentState, event);
     }
   }
 
   Stream<ServiceState> _mapTestScvEvToState(currentState, ev) async* {
     try {
       final result = await testScv(ev);
+      yield ServiceLoaded(result);
+    } catch (_) {
+      yield ServiceNotLoaded();
+    }
+  }
+
+  Stream<ServiceState> _mapCreatePersonEvToState(currentState, ev) async* {
+    try {
+      final result = await createPerson(ev);
+      yield ServiceLoaded(result);
+    } catch (_) {
+      yield ServiceNotLoaded();
+    }
+  }
+
+  Stream<ServiceState> _mapQuickAddVariantEvToState(currentState, ev) async* {
+    try {
+      final result = await quickAddVariant(ev);
       yield ServiceLoaded(result);
     } catch (_) {
       yield ServiceNotLoaded();

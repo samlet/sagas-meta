@@ -4,9 +4,11 @@ import 'package:sagas_meta/src/meta/hello.pb.dart';
 import 'package:sagas_meta/src/meta/metainfo.pb.dart';
 
 void queryService(BrokerClient brokerClient) async{
+  // final locale="zh_CN";
+  final locale="en_US";
   MetaQuery query=MetaQuery.create()
     ..infoType='form'
-    ..uri="component://content/widget/forum/BlogForms.xml;EditBlog;zh_CN";
+    ..uri="component://content/widget/forum/BlogForms.xml;EditBlog;"+locale;
   var result=await brokerClient.invoke(query.writeToBuffer());
   var resp=MetaPayload.fromBuffer(result);
   print(resp.type);

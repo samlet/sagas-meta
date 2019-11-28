@@ -25,7 +25,7 @@ class EntityBloc<T> extends Bloc<EntityEvent, EntityState> {
   get initialState => EntityUninitialized();
 
   @override
-  Stream<EntityState> mapEventToState(currentState, event) async* {
+  Stream<EntityState> mapEventToState(EntityEvent event) async* {
     if (event is Fetch && !_hasReachedMax(currentState)) {
       try {
         if (currentState is EntityUninitialized) {
@@ -33,11 +33,12 @@ class EntityBloc<T> extends Bloc<EntityEvent, EntityState> {
           yield EntityLoaded<T>(posts: posts, hasReachedMax: false);
         }
         if (currentState is EntityLoaded) {
-          final posts = await _fetchEntitys(currentState.posts.length, defaultLimit);
+          final posts = await _fetchEntitys((currentState as EntityLoaded).posts.length,
+              defaultLimit);
           yield posts.isEmpty
-              ? currentState.copyWith(hasReachedMax: true)
+              ? (currentState as EntityLoaded).copyWith(hasReachedMax: true)
               : EntityLoaded<T>(
-                  posts: currentState.posts + posts,
+                  posts: (currentState as EntityLoaded).posts + posts,
                   hasReachedMax: false,
                 );
         }

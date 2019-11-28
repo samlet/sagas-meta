@@ -22,7 +22,7 @@ void testOffer(BrokerClient brokerClient) async{
 }
 
 void testStore(BrokerClient brokerClient) async{
-  var value=ProductType(productTypeId:"Test_type_111");
+  var value=ProductType(productTypeId:"Test_type_114");
   TaJsonEntities entities=TaJsonEntities.create();
   entities.entities.add(TaJsonEntity.create()
       ..entityName='ProductType'
@@ -48,10 +48,38 @@ void testStore(BrokerClient brokerClient) async{
   }
 }
 
+
+void testQuery(BrokerClient brokerClient) async{
+  var value=ProductType(productTypeId:"Test_type_114");
+  TaStringEntries entry=TaStringEntries.create()
+    ..entityName='ProductType';
+  entry.values.addAll(value.asMap().map((k,v) =>
+      MapEntry<String,String>(k, v.toString())));
+
+  BlueMessage msg=BlueMessage.create()
+    ..actorPath='akka://default/user/logins/system/persister'
+    ..type='get'
+    ..body=entry.writeToBuffer();
+
+  var result=await brokerClient.invoke(msg.writeToBuffer());
+  var resp=MetaPayload.fromBuffer(result);
+  print(resp.type);
+  if(resp.type==MetaPayloadType.ACTION_RESULT) {
+    // var form = MetaForm.fromBuffer(resp.body);
+    // print(form);
+    print('ok.');
+    var val=TaJsonEntity.fromBuffer(resp.body);
+    print(val);
+  }else{
+    print('err.');
+  }
+}
+
 void main() async{
   BrokerClient brokerClient=new BrokerClient('blue_queue');
   await testOffer(brokerClient);
   await testStore(brokerClient);
+  await testQuery(brokerClient);
 
   await brokerClient.close();
 }

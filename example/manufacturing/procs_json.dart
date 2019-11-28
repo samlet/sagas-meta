@@ -14,4 +14,7 @@ void main(){
     'startDate': productionRunStartDate, 'facilityId': facilityId};
   var jsonstr=json.encode(payloadContent);
   print(jsonstr);
+
+  dynamic jsonData=json.decode(jsonstr);
+  print(jsonData);
 }

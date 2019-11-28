@@ -2,6 +2,9 @@ import 'package:sagas_meta/src/broker_api.dart';
 import 'package:sagas_meta/src/meta/blueprints.pb.dart';
 import 'package:sagas_meta/src/meta/hello.pb.dart';
 
+/*
+servant: com.sagas.actors.bus.BlueSrvMain
+ */
 void main() async{
   BrokerClient brokerClient=new BrokerClient('blue_queue');
 
