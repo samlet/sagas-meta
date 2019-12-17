@@ -4,16 +4,20 @@
 # Remove the following pattern if you wish to check in your lock file
 pubspec.lock
 
+.idea/
+
 # Conventional directory for build outputs
 build/
 
 # Directory created by dartdoc
 doc/api/
-lib/src/models/
-lib/src/services/
-lib/src/jsonifiers/
-lib/src/meta/
-.idea/
-data/_entities.data
-data/entities.data
-data/ofbizDemo.data
+
+# Generate codes
+# lib/src/models/
+# lib/src/services/
+# lib/src/jsonifiers/
+# lib/src/meta/
+
+# data/_entities.data
+# data/entities.data
+# data/ofbizDemo.data

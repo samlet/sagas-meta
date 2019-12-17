@@ -1,0 +1,155 @@
+
+Ú
+dU2VjdXJpdHlHcm91cFBlcm1pc3Npb246QklaQURNSU7ilqtPRkJJWkRFTU9fQURNSU7ilqsyMDAxLTA1LTEzIDEyOjAwOjAwLjA=r
+
+groupIdBIZADMIN
+
+permissionIdOFBIZDEMO_ADMIN
+!
+fromDate2001-05-13 12:00:00.0SecurityGroupPermission
+Ø
+ T2ZiaXpEZW1vOlNBTVBMRV9ERU1PXzQ=³
+
+ofbizDemoIdSAMPLE_DEMO_4
+3
+comments'This is test comment for fourth record.
+
+ofbizDemoTypeIdEXTERNAL
+
+lastNameSample last 4
+
+	firstNameSample First 4	OfbizDemo
+Ú
+dU2VjdXJpdHlHcm91cFBlcm1pc3Npb246RkxFWEFETUlO4parT0ZCSVpERU1PX1ZJRVfilqsyMDAxLTA1LTEzIDEyOjAwOjAwLjA=r
+
+groupId	FLEXADMIN
+
+permissionIdOFBIZDEMO_VIEW
+!
+fromDate2001-05-13 12:00:00.0SecurityGroupPermission
+¨
+0U2VjdXJpdHlQZXJtaXNzaW9uOk9GQklaREVNT19DUkVBVEU=t
+<
+description-Create operations in the OfbizDemo Component.
+ 
+permissionIdOFBIZDEMO_CREATESecurityPermission
+¤
+0U2VjdXJpdHlQZXJtaXNzaW9uOk9GQklaREVNT19BRE1JTg==p
+9
+description*ALL operations in the OfbizDemo Component.
+
+permissionIdOFBIZDEMO_ADMINSecurityPermission
+¨
+0U2VjdXJpdHlQZXJtaXNzaW9uOk9GQklaREVNT19ERUxFVEU=t
+<
+description-Delete operations in the OfbizDemo Component.
+ 
+permissionIdOFBIZDEMO_DELETESecurityPermission
+×
+ T2ZiaXpEZW1vOlNBTVBMRV9ERU1PXzE=²
+
+lastNameSample Last 1
+
+	firstNameSample First 1
+
+ofbizDemoIdSAMPLE_DEMO_1
+2
+comments&This is test comment for first record.
+
+ofbizDemoTypeIdINTERNAL	OfbizDemo
+x
+ T2ZiaXpEZW1vVHlwZTpFWFRFUk5BTA==T
+
+ofbizDemoTypeIdEXTERNAL
+&
+descriptionExternal Demo - On SiteOfbizDemoType
+Û
+dU2VjdXJpdHlHcm91cFBlcm1pc3Npb246RlVMTEFETUlO4parT0ZCSVpERU1PX0FETUlO4parMjAwMS0wNS0xMyAxMjowMDowMC4ws
+
+groupId	FULLADMIN
+
+permissionIdOFBIZDEMO_ADMIN
+!
+fromDate2001-05-13 12:00:00.0SecurityGroupPermission
+¨
+0U2VjdXJpdHlQZXJtaXNzaW9uOk9GQklaREVNT19VUERBVEU=t
+<
+description-Update operations in the OfbizDemo Component.
+ 
+permissionIdOFBIZDEMO_UPDATESecurityPermission
+ 
+,U2VjdXJpdHlQZXJtaXNzaW9uOk9GQklaREVNT19WSUVXp
+:
+description+View operations in the OfbizDemo Component.
+
+permissionIdOFBIZDEMO_VIEWSecurityPermission
+w
+ T2ZiaXpEZW1vVHlwZTpJTlRFUk5BTA==S
+%
+descriptionInternal Demo - Office
+
+ofbizDemoTypeIdINTERNALOfbizDemoType
+à
+hU2VjdXJpdHlHcm91cFBlcm1pc3Npb246RkxFWEFETUlO4parT0ZCSVpERU1PX1VQREFUReKWqzIwMDEtMDUtMTMgMTI6MDA6MDAuMA==t
+ 
+permissionIdOFBIZDEMO_UPDATE
+!
+fromDate2001-05-13 12:00:00.0
+
+groupId	FLEXADMINSecurityGroupPermission
+×
+ T2ZiaXpEZW1vOlNBTVBMRV9ERU1PXzM=²
+2
+comments&This is test comment for third record.
+
+ofbizDemoTypeIdEXTERNAL
+
+lastNameSample last 3
+
+	firstNameSample First 3
+
+ofbizDemoIdSAMPLE_DEMO_3	OfbizDemo
+Ó
+`U2VjdXJpdHlHcm91cFBlcm1pc3Npb246U1VQRVLilqtPRkJJWkRFTU9fQURNSU7ilqsyMDAxLTA1LTEzIDEyOjAwOjAwLjA=o
+
+groupIdSUPER
+
+permissionIdOFBIZDEMO_ADMIN
+!
+fromDate2001-05-13 12:00:00.0SecurityGroupPermission
+Ú
+dU2VjdXJpdHlHcm91cFBlcm1pc3Npb246VklFV0FETUlO4parT0ZCSVpERU1PX1ZJRVfilqsyMDAxLTA1LTEzIDEyOjAwOjAwLjA=r
+
+groupId	VIEWADMIN
+
+permissionIdOFBIZDEMO_VIEW
+!
+fromDate2001-05-13 12:00:00.0SecurityGroupPermission
+Ø
+ T2ZiaXpEZW1vOlNBTVBMRV9ERU1PXzI=³
+
+ofbizDemoIdSAMPLE_DEMO_2
+3
+comments'This is test comment for second record.
+
+ofbizDemoTypeIdINTERNAL
+
+lastNameSample last 2
+
+	firstNameSample First 2	OfbizDemo
+à
+hU2VjdXJpdHlHcm91cFBlcm1pc3Npb246RkxFWEFETUlO4parT0ZCSVpERU1PX0NSRUFUReKWqzIwMDEtMDUtMTMgMTI6MDA6MDAuMA==t
+ 
+permissionIdOFBIZDEMO_CREATE
+!
+fromDate2001-05-13 12:00:00.0
+
+groupId	FLEXADMINSecurityGroupPermission
+à
+hU2VjdXJpdHlHcm91cFBlcm1pc3Npb246RkxFWEFETUlO4parT0ZCSVpERU1PX0RFTEVUReKWqzIwMDEtMDUtMTMgMTI6MDA6MDAuMA==t
+
+groupId	FLEXADMIN
+ 
+permissionIdOFBIZDEMO_DELETE
+!
+fromDate2001-05-13 12:00:00.0SecurityGroupPermission
