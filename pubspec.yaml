@@ -16,7 +16,7 @@ dependencies:
   dart_amqp: ^0.1.1
   # bloc: ^0.9.5
   bloc: ^0.11.0
-  intl: ^0.15.7
+  intl: ^0.16.0
   decimal: ^0.3.0
   sprintf: ^4.0.0
 
