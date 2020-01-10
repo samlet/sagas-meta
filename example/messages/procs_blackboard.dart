@@ -10,7 +10,8 @@ import 'package:sagas_meta/src/utils.dart';
 
 class TrackBlocDelegate extends BlocDelegate {
   @override
-  void onTransition(Transition transition) {
+  void onTransition(Bloc bloc, Transition transition) {
+    super.onTransition(bloc, transition);
     print(transition);
     var state = transition.nextState;
     if (state is BlackboardAuthenticated) {
@@ -27,7 +28,8 @@ class TrackBlocDelegate extends BlocDelegate {
 }
 
 void main() async{
-  BlocSupervisor().delegate = TrackBlocDelegate();
+  // BlocSupervisor().delegate = TrackBlocDelegate();
+  BlocSupervisor.delegate = TrackBlocDelegate();
   ConnectionSettings settings = new ConnectionSettings(
       host: "localhost"
   );
@@ -40,21 +42,23 @@ void main() async{
       brokerClient: BrokerClient('blue_queue'),
       responserBloc: ResponserBloc(),
       messageBus: bus);
-  bb.dispatch(LoggedIn(token:'system'));
+  // bb.dispatch(LoggedIn(token:'system'));
+  bb.add(LoggedIn(token:'system'));
   print("serving ...");
 
   await sleepSeconds(2);
   // await brokerClient.close();
   // reconnect
   print("logout ...");
-  bb.dispatch(LoggedOut());
+  // bb.dispatch(LoggedOut());
+  bb.add(LoggedOut());
 
   print("relogin ...");
-  bb.dispatch(LoggedIn(token:'system'));
+  bb.add(LoggedIn(token:'system'));
 
   while(true) {
     await sleepSeconds(3);
-    print(indicatorBloc.currentState);
+    print(indicatorBloc.state);
   }
 }
 
