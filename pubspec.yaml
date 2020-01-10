@@ -1,21 +1,22 @@
 name: sagas_meta
-description: A starting point for Dart libraries or applications.
+description: sagas meta library.
 # version: 1.0.0
 # homepage: https://www.example.com
 # author: Samlet Wu <email@example.com>
 
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   path: ^1.4.1
   http: 0.12.0
   equatable: 0.1.6
   # rxdart: ^0.18.1
-  rxdart: ^0.21.0
+  # rxdart: ^0.21.0
+  rxdart: ^0.22.0
   dart_amqp: ^0.1.4
   # bloc: ^0.9.5
-  bloc: ^0.11.0
+  bloc: ^0.13.0
   intl: ^0.16.0
   decimal: ^0.3.0
   sprintf: ^4.0.0

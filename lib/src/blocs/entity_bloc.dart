@@ -15,11 +15,13 @@ class EntityBloc<T> extends Bloc<EntityEvent, EntityState> {
 
   EntityBloc({@required this.fetcher});
 
+  /*
   @override
   Stream<EntityEvent> transform(Stream<EntityEvent> events) {
     return (events as Observable<EntityEvent>)
         .debounce(Duration(milliseconds: 500));
   }
+   */
 
   @override
   get initialState => EntityUninitialized();

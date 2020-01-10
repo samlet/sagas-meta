@@ -10,7 +10,8 @@ import 'package:sagas_meta/src/utils.dart';
 
 class TrackBlocDelegate extends BlocDelegate {
   @override
-  void onTransition(Transition transition) {
+  void onTransition(Bloc bloc, Transition transition) {
+    super.onTransition(bloc, transition);
     print(transition);
     var state = transition.nextState;
     if (state is FormInitialized) {

@@ -10,7 +10,8 @@ import 'package:sagas_meta/src/utils.dart';
 
 class TrackBlocDelegate extends BlocDelegate {
   @override
-  void onTransition(Transition transition) {
+  void onTransition(Bloc bloc, Transition transition) {
+    super.onTransition(bloc, transition);
     print(transition);
     var state = transition.nextState;
     if (state is BlackboardAuthenticated) {
@@ -29,7 +30,8 @@ class TrackBlocDelegate extends BlocDelegate {
 void main() async{
   BlocSupervisor().delegate = TrackBlocDelegate();
   ConnectionSettings settings = new ConnectionSettings(
-      host: "localhost"
+      // host: "localhost"
+      host: "192.168.0.101"
   );
 
   Client client = new Client(settings: settings);
